@@ -3,4 +3,4 @@ see it life here:
 https://hanumanum.github.io/math-problem-generator/
 
 
-![math problem generator screenshot](screenshot.png)
+![IMAGE screenshot math problem generator](screenshot.png)
