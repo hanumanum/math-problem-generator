@@ -3,7 +3,7 @@ let levels = document.getElementById("levels");
 let regen = document.getElementById("regen");
 
 //TODO: remove later, just for testing
-//levels.value = 5;
+levels.value = 1;
 
 eq.innerHTML = newEq(levels.value);
 MathJax.Hub.Typeset();
@@ -19,7 +19,7 @@ regen.addEventListener("click",function(){
     MathJax.Hub.Typeset();
 })
 
-function newEq(level){
+function newEq(level=1){
     console.log(level);
     let ops = ["+","-"];
     let n1 =  randomInt(5,30);
