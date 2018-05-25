@@ -3,7 +3,7 @@ let levels = document.getElementById("levels");
 let regen = document.getElementById("regen");
 
 //TODO: remove later, just for testing
-//levels.value = 2;
+levels.value = 5;
 
 eq.innerHTML = newEq(levels.value);
 MathJax.Hub.Typeset();
@@ -30,15 +30,22 @@ function newEq(level){
     let op2 = randomInt(0,2);
 
     if(level==="1"){
+        return "$$x = "+n1+"a(b-"+12+")"+ops[op1]+n2+"b"+ops[op2]+"c$$";
+    }
+    else if(level==="2"){
         return "$$x = "+n1+"a^"+p+ops[op1]+n2+"b"+ops[op2]+"c$$";
     }
-    else if (level==="2"){
+    else if (level==="3"){
         return "$$x = "+n1+ "\\sqrt{a}"+ops[op1]+n2+"b"+ops[op2]+"c$$";
 
     }
-    else if (level==="3"){
+    else if (level==="4"){
         return "$$x = \\frac{"+n1+"a^"+p+"+"+n2+"b+c} {"+n3+"}$$";
     }
+    else if (level==="5"){
+        return "$$x = \\frac{"+n1+"a^"+p+ops[op2]+n2+"b+c} {"+"\\sqrt{a}"+ops[op1]+n3+"|c|}$$";
+    }
+
 }
 
 
