@@ -20,11 +20,23 @@
                 
           </div>
           <div class="col-3" id="sidebar">
-                <label>Levels</label>
+                <div class="font-weight-bold">Languages</div>
+                  <div>
+                  <div class="custom-control custom-radio custom-control-inline">
+                      <input type="radio" id="lang_en" name="langs" class="custom-control-input" checked>
+                      <label class="custom-control-label" for="lang_en">ENG</label>
+                    </div>
+                    <div class="custom-control custom-radio custom-control-inline">
+                      <input type="radio" id="lang_hy" name="langs" class="custom-control-input" disabled>
+                      <label class="custom-control-label" for="lang_hy">ՀԱՅ</label>
+                    </div>
+                  </div>
+                  <br>
+                <div class="font-weight-bold">Levels</div>
                 <select class="custom-select" id="levels">
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
+                        <option value="1">Simple</option>
+                        <option value="2">With root</option>
+                        <option value="3">With fractions</option>
                 </select>
           </div>
         </div>
