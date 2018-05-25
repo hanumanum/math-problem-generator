@@ -1,5 +1,6 @@
 let eq = document.getElementById("eq");
 let levels = document.getElementById("levels");
+let regen = document.getElementById("regen");
 
 //TODO: remove later, just for testing
 //levels.value = 2;
@@ -9,6 +10,11 @@ MathJax.Hub.Typeset();
 
 
 levels.addEventListener("change",function(){
+    eq.innerHTML = newEq(levels.value);
+    MathJax.Hub.Typeset();
+})
+
+regen.addEventListener("click",function(){
     eq.innerHTML = newEq(levels.value);
     MathJax.Hub.Typeset();
 })
