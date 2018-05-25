@@ -3,7 +3,7 @@ let levels = document.getElementById("levels");
 let regen = document.getElementById("regen");
 
 //TODO: remove later, just for testing
-levels.value = 5;
+//levels.value = 5;
 
 eq.innerHTML = newEq(levels.value);
 MathJax.Hub.Typeset();
