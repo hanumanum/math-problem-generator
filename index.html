@@ -9,6 +9,9 @@
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
     crossorigin="anonymous">
+  <!-- open-iconic-bootstrap (icon set for bootstrap) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic-bootstrap.min.css"
+    integrity="sha256-BJ/G+e+y7bQdrYkS2RBTyNfBHpA9IuGaPmf9htub5MQ=" crossorigin="anonymous" />
   <link rel="stylesheet" href="style.css">
   <title>Math problem generator!</title>
 </head>
@@ -32,8 +35,13 @@
       <div class="col-8">
         <div id="eq"></div>
         <div>
-          <span class="badge badge-primary">inputs</span> a,b,c <br>
-          <span class="badge badge-primary">output</span> x 
+          <span class="badge badge-primary">inputs</span> a,b,c
+          <br>
+          <span class="badge badge-primary">output</span> x
+        </div>
+        <div class="float-right">
+          <button type="button" id="dwnl" class="btn btn-primary"><span class="oi oi-data-transfer-download"></span> Download</button>
+          <button type="button" id="regen" class="btn btn-primary"><span class="oi oi-reload"></span> Get new</button>
         </div>
       </div>
       <div class="col-3" id="sidebar">
@@ -57,17 +65,24 @@
           <option value="4">3. With fractions</option>
           <option value="5">4. Complex with fractions</option>
         </select>
+        <!--
+        <br>
+        <br>
+        <div class="font-weight-bold">Download Problem</div>
+        <button type="button" id="dwnl" class="btn btn-primary">Download</button>
         <br>
         <br>
         <div class="font-weight-bold">Change problem</div>
-        <button type="button" id="regen" class="btn btn-primary">get new</button>
+        <button type="button" id="regen" class="btn btn-primary">Get new</button>
+         -->
       </div>
 
     </div>
-    
+
   </div>
   <footer class="footer text-center">
-    by <a href="http://ablog.gratun.am/" target="_blank">hanuman</a> , 2016
+    by
+    <a href="http://ablog.gratun.am/" target="_blank">hanuman</a> , 2016
   </footer>
 
   <!-- Optional JavaScript -->
@@ -79,7 +94,11 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
     crossorigin="anonymous"></script>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js'></script>
   <script src='script.js'></script>
+
+
+
   <a href="https://github.com/hanumanum/math-problem-generator">
     <img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"
       alt="Fork me on GitHub">
