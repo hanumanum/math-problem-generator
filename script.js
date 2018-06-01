@@ -2,6 +2,7 @@ let eq = document.getElementById("eq");
 let levels = document.getElementById("levels");
 let regen = document.getElementById("regen");
 let dwnl = document.getElementById("dwnl");
+let problem  = document.getElementById("problem");
 
 
 //TODO: remove later, just for testing
@@ -22,7 +23,7 @@ regen.addEventListener("click", function () {
 })
 
 dwnl.addEventListener("click", function () {
-    printToFile(eq);
+    printToFile(problem);
 })
 
 function newEq(level = 1) {
@@ -60,12 +61,14 @@ function randomInt(min, max) {
 }
 
 
-
 function downloadURI(uri, name) {
     var link = document.createElement("a");
     link.download = name;
     link.href = uri;
+    document.getElementsByTagName("body")[0].appendChild(link);
     link.click();
+    link.remove();
+
 }
 
 function printToFile(div) {
@@ -73,7 +76,7 @@ function printToFile(div) {
         onrendered: function (canvas) {
             var myImage = canvas.toDataURL("image/png");
             var fileName = Date.now();
-            downloadURI("data:" + myImage, "math-problem-generator-" + fileName + ".png");
+            downloadURI("data:" + myImage, "math-problem-generator" + fileName + ".png");
         }
     });
 }
