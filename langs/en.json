@@ -1,0 +1,23 @@
+{
+    "language":"en",
+    "txt_title":"Math problem generator",
+    "txt_subtitle":"Exercises for beginner programmers (basically)",
+    "txt_description":"Write a program that can calculate problems in programming language you study. Be sure you already mastering basic math in that language.",
+    "txt_inputs":"input",
+    "txt_output":"output",
+    "txt_abouttest":"you can test your programm with this values",
+    "txt_if":"if",
+    "txt_than":"than",
+    "txt_download":"Download",
+    "txt_getnew":"Get New",
+    "txt_languages":"Languages",
+    "txt_levels":"Levels",
+    "txt_lv1":"Arithmetics",
+    "txt_lv2":"Simple",
+    "txt_lv3":"With root",
+    "txt_lv4":"With fractions",
+    "txt_lv5":"Complex with fractions"
+}
+
+
+
