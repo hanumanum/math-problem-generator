@@ -16,7 +16,7 @@ Array.prototype.rnd = function () {
 
 
 //TODO: remove later, just for testing
-levels.value = 1;
+levels.value =4;
 getNewEq();
 
 levels.addEventListener("change", function () {
@@ -76,21 +76,22 @@ function newEq(level = 1) {
     if (level === "1") {
         checks.jax = "$$x = " + n1 + "a(b-" + 12 + ")" + op1 + n2 + "b" + op2 + "c$$";
         checks.x = n1*checks.a*(checks.b - 12) + ((op1=="-")?(-1):1)*n2*checks.b + ((op2=="-")?(-1):1) * checks.c;
-        console.log(checks);
-        
     }
     else if (level === "2") {
         checks.jax =  "$$x = " + n1 + "a^" + p + op1 + n2 + "b" + op2 + "c$$";
+        checks.x = n1*Math.pow(checks.a,p) + ((op1=="-")?(-1):1)*n2*checks.b + ((op2=="-")?(-1):1) * checks.c;
     }
     else if (level === "3") {
         checks.jax = "$$x = " + n1 + "\\sqrt{a}" + op1 + n2 + "b" + op2 + "c$$";
-
+        checks.x = n1*Math.sqrt(checks.a) + ((op1=="-")?(-1):1)*n2*checks.b + ((op2=="-")?(-1):1) * checks.c;
     }
     else if (level === "4") {
         checks.jax =  "$$x = \\frac{" + n1 + "a^" + p + op1 + n2 + "b"+op2+"c} {" + n3 + "}$$";
+        checks.x = (n1*Math.pow(checks.a,p) + ((op1=="-")?(-1):1)*n2*checks.b + ((op2=="-")?(-1):1) * checks.c)/n3;
     }
     else if (level === "5") {
         checks.jax =  "$$x = \\frac{" + n1 + "a^" + p + op2 + n2 + "b+c} {" + "\\sqrt{a}" + op1 + n3 + "|c|}$$";
+        checks.x = (n1*Math.pow(checks.a,p) + ((op1=="-")?(-1):1)*n2*checks.b + checks.c)/(Math.sqrt(checks.a) - ((op2=="-")?(-1):1)*n3*Math.abs(checks.c));
     }
 
     return checks;
