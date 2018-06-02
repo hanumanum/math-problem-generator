@@ -21,27 +21,27 @@
     <br>
     <br>
     <br>
-    <h1>Math problem generator
+    <h1><span id="txt_title">Math problem generator</span>
       <span class="badge badge-secondary">beta</span>
     </h1>
-    <div>Exercises for beginner programmers (basically)</div>
+    <div><span id="txt_subtitle">Exercises for beginner programmers (basically)</span></div>
     <br>
-    <div class="alert alert-success" role="alert">
+    <div class="alert alert-success" role="alert" id="txt_description">
       Write a program that can calculate problems in programming language you study.
-      <br>Be sure you already mastering basic math in that language.
+      Be sure you already mastering basic math in that language.
     </div>
     <br>
     <div class="row">
       <div class="col-8">
         <div id="problem">
-          <span class="badge badge-primary">inputs</span> a,b,c
-          <span class="badge badge-primary">output</span> x
+          <span class="badge badge-primary" id="txt_inputs">inputs</span> a,b,c
+          <span class="badge badge-primary" id="txt_output">output</span> x
           <div id="eq"></div>
           <div>
             <br>
             <div id="testing">
-              <div>you can test your programm with this values</div>
-              if a=
+              <div id="txt_abouttest">you can test your programm with this values</div>
+              <span id="txt_than">if</span> a=
               <span class="badge badge-warning">a=
                 <span id="tva">200</span>
               </span>, b=
@@ -51,7 +51,7 @@
               <span class="badge badge-warning">c=
                 <span id="tvc">100</span>
               </span>
-              <br> than
+              <br> <span id="txt_than">than</span>
               <span class="badge badge-success">x&cong;
                 <span id="tvx">100</span>
               </span>
@@ -61,13 +61,13 @@
         <hr>
         <div class="float-right">
           <button type="button" id="dwnl" class="btn btn-success">
-            <span class="oi oi-data-transfer-download"></span> Download</button>
+            <span class="oi oi-data-transfer-download"></span> <span id="txt_download">Download</span></button>
           <button type="button" id="regen" class="btn btn-success">
-            <span class="oi oi-reload"></span> Get new</button>
+            <span class="oi oi-reload"></span> <span id="txt_getnew">Get new</span></button>
         </div>
       </div>
       <div class="col-3" id="sidebar">
-        <div class="font-weight-bold">Languages</div>
+        <div class="font-weight-bold" id="txt_languages">Languages</div>
         <div>
           <div class="custom-control custom-radio custom-control-inline">
             <input type="radio" id="lang_en" name="langs" class="custom-control-input" checked>
@@ -79,13 +79,13 @@
           </div>
         </div>
         <br>
-        <div class="font-weight-bold">Levels</div>
+        <div class="font-weight-bold" id="txt_levels">Levels</div>
         <select class="custom-select" id="levels" size="15">
-          <option value="1" selected>0. Arithmetics</option>
-          <option value="2">1. Simple</option>
-          <option value="3">2. With root</option>
-          <option value="4">3. With fractions</option>
-          <option value="5">4. Complex with fractions</option>
+          <option value="1" selected id="txt_lv1">Arithmetics</option>
+          <option value="2" id="txt_lv2">Simple</option>
+          <option value="3" id="txt_lv3">With root</option>
+          <option value="4" id="txt_lv4">With fractions</option>
+          <option value="5" id="txt_lv4">Complex with fractions</option>
         </select>
       </div>
 
@@ -97,6 +97,7 @@
     <a href="http://ablog.gratun.am/" target="_blank">hanuman</a> , 2016
   </footer>
 
+  
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
