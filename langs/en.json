@@ -5,7 +5,7 @@
     "txt_description":"Write a program that can calculate problems in programing language you study.<br> Be sure you already mastering basic math in that language.",
     "txt_inputs":"input",
     "txt_output":"output",
-    "txt_abouttest":"you can check your programm with this values",
+    "txt_abouttest":"You can check your programm with this values:",
     "txt_if":"if",
     "txt_than":"than",
     "txt_download":"Download",
