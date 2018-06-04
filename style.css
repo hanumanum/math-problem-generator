@@ -5,7 +5,7 @@ body{
 .container {
     background-color: white;
     padding: 15px 43px;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 #eq {
@@ -35,3 +35,6 @@ body{
     font-size: 1.2em;
 }
 
+.custom-control-label{
+    cursor: pointer;
+}
