@@ -9,11 +9,12 @@ let tvb = document.getElementById("tvb");
 let tvc = document.getElementById("tvc");
 let tvx = document.getElementById("tvx");
 let testing = document.getElementById("testing");
+let langUrl = "https://hanumanum.github.io/math-problem-generator/langs/";
+let lang = "en";
 
 Array.prototype.rnd = function () {
     return this[Math.floor(Math.random() * this.length)]
 }
-
 
 //TODO: remove later, just for testing
 levels.value=5;
@@ -31,14 +32,20 @@ dwnl.addEventListener("click", function () {
     printToFile(problem);
 })
 
+
+$('input[type=radio]').change( function() {
+    lang = $(this).val();
+    translateAll(lang);
+ });
+
 function getNewEq(){
     e = newEq(levels.value);
     eq.innerHTML = e.jax;
     MathJax.Hub.Typeset();
-    udpateTestValues(e);
+    udpateSelfTestValues(e);
 }
 
-function udpateTestValues(e){
+function udpateSelfTestValues(e){
     if(e.x === 0){
         testing.style.visibility = "hidden";
     }
@@ -124,4 +131,25 @@ function printToFile(div) {
     });
 }
 
+
+
+function translateAll(lng){
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            var txt_strs = JSON.parse(this.responseText);
+            for(var txt_st in txt_strs){
+                console.log(txt_st, txt_strs[txt_st]); 
+                var trans = document.getElementById(txt_st);
+                if(trans){
+                    trans.innerHTML = txt_strs[txt_st];
+                }
+                
+            }
+            
+        }
+    };
+    xhttp.open("GET", langUrl+lng+".json" , true);
+    xhttp.send();
+}
 
