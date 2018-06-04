@@ -16,7 +16,7 @@ Array.prototype.rnd = function () {
 
 
 //TODO: remove later, just for testing
-levels.value =4;
+levels.value=5;
 getNewEq();
 
 levels.addEventListener("change", function () {
