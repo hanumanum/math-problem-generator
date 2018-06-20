@@ -19,26 +19,26 @@
 <body>
   <div class="container">
     <div id="languages">
-        <div class="float-right">
-          <div class="font-weight-bold" id="txt_languages">Languages</div>
-          <div class="custom-control custom-radio custom-control-inline">
-            <input type="radio" id="lang_en" value="en" name="langs" class="custom-control-input" checked>
-            <label class="custom-control-label" for="lang_en">ENG</label>
-          </div>
-          <div class="custom-control custom-radio custom-control-inline">
-            <input type="radio" id="lang_hy" value="hy" name="langs" class="custom-control-input">
-            <label class="custom-control-label" for="lang_hy">ՀԱՅ</label>
-          </div>
-          <div class="custom-control custom-radio custom-control-inline">
-            <input type="radio" id="lang_ru" value="ru" name="langs" class="custom-control-input">
-            <label class="custom-control-label" for="lang_ru">РУС</label>
-          </div>
-          <div class="custom-control custom-radio custom-control-inline">
-            <input type="radio" id="lang_fr" value="fr" name="langs" class="custom-control-input" disabled>
-            <label class="custom-control-label" for="lang_fr">FRA</label>
-          </div>
+      <div class="float-right">
+        <div class="font-weight-bold" id="txt_languages">Languages</div>
+        <div class="custom-control custom-radio custom-control-inline">
+          <input type="radio" id="lang_en" value="en" name="langs" class="custom-control-input" checked>
+          <label class="custom-control-label" for="lang_en">ENG</label>
+        </div>
+        <div class="custom-control custom-radio custom-control-inline">
+          <input type="radio" id="lang_hy" value="hy" name="langs" class="custom-control-input">
+          <label class="custom-control-label" for="lang_hy">ՀԱՅ</label>
+        </div>
+        <div class="custom-control custom-radio custom-control-inline">
+          <input type="radio" id="lang_ru" value="ru" name="langs" class="custom-control-input">
+          <label class="custom-control-label" for="lang_ru">РУС</label>
+        </div>
+        <div class="custom-control custom-radio custom-control-inline">
+          <input type="radio" id="lang_fr" value="fr" name="langs" class="custom-control-input" disabled>
+          <label class="custom-control-label" for="lang_fr">FRA</label>
         </div>
       </div>
+    </div>
     <br>
     <h1>
       <span id="txt_title">Math problem generator</span>
@@ -54,7 +54,7 @@
     </div>
     <br>
     <div class="row">
-      <div class="col-8">
+      <div class="col-12 col-sm-12 col-md-8">
         <div id="problem">
           <span class="badge badge-primary" id="txt_inputs">inputs</span> a,b,c
           <span class="badge badge-primary" id="txt_output">output</span> x
@@ -79,7 +79,9 @@
               </span>
             </div>
           </div>
+          <hr>
           <small>https://github.com/hanumanum</small>
+          <br><small><span id="txt_generated">generated at</span> <span id="gendate"></span></small>
         </div>
         <hr>
         <div class="float-right">
@@ -93,7 +95,7 @@
           </button>
         </div>
       </div>
-      <div class="col-3" id="sidebar">
+      <div class="col-12 col-sm-12 col-md-3" id="sidebar">
 
         <br>
         <div class="font-weight-bold" id="txt_levels">Levels</div>

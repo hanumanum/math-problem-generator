@@ -16,7 +16,8 @@
     "txt_lv2":"Simple",
     "txt_lv3":"With root",
     "txt_lv4":"With fractions",
-    "txt_lv5":"Complex with fractions"
+    "txt_lv5":"Complex with fractions",
+    "txt_generated":"Generated at"
 }
 
 
