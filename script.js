@@ -13,6 +13,26 @@ let langUrl = "https://hanumanum.github.io/math-problem-generator/langs/";
 let lang = "en";
 let gendate = document.getElementById("gendate");
 
+
+window.addEventListener("hashchange", function () {
+    let ln = document.URL.split("#")[1];
+    if (ln) {
+        lang = ln;
+        translateAll(lang);
+        $('#lang_'+lang).prop("checked",true);
+    }
+})
+
+window.addEventListener("load",function(){
+    let ln = document.URL.split("#")[1];
+    if (ln) {
+        lang = ln;
+        translateAll(lang);
+        $('#lang_'+lang).prop("checked",true);
+    }
+});
+
+
 Array.prototype.rnd = function () {
     return this[Math.floor(Math.random() * this.length)]
 }
@@ -36,6 +56,8 @@ dwnl.addEventListener("click", function () {
 
 $('input[type=radio]').change(function () {
     lang = $(this).val();
+    window.location.hash=lang;
+    console.log(window.location.hash);
     translateAll(lang);
 });
 
@@ -141,7 +163,7 @@ function translateAll(lng) {
         if (this.readyState == 4 && this.status == 200) {
             var txt_strs = JSON.parse(this.responseText);
             for (var txt_st in txt_strs) {
-                console.log(txt_st, txt_strs[txt_st]);
+                //console.log(txt_st, txt_strs[txt_st]);
                 var trans = document.getElementById(txt_st);
                 if (trans) {
                     trans.innerHTML = txt_strs[txt_st];
@@ -155,7 +177,7 @@ function translateAll(lng) {
     xhttp.send();
 }
 
-function nowFormatted(){
+function nowFormatted() {
     let d = new Date();
-    return d.getFullYear() + "-" +  d.getMonth() + "-" + d.getDay() + " " + d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds();
+    return d.getFullYear() + "-" + d.getMonth() + "-" + d.getDay() + " " + d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds();
 }

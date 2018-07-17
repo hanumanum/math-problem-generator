@@ -2,7 +2,7 @@
     "language":"fr",
     "txt_title":"Générateur de problèmes mathématiques",
     "txt_subtitle":"Exercices pour les programmeurs débutants (fondamentalement)",
-    "txt_description":"Ecrire un programme qui peut calculer des problèmes dans la langue de programmation que vous étudiez.<br> Assurez-vous de maîtriser les mathématiques de base dans cette langue.",
+    "txt_description":"Ecrivez un programme qui peut résoudre des problèmes dans la langue de programmation que vous étudiez.<br> Assurez-vous de maîtriser les mathématiques de base dans cette langue.",
     "txt_inputs":"contribution",
     "txt_output":"sortie",
     "txt_abouttest":"Vous pouvez vérifier votre programme avec ces valeurs:",
