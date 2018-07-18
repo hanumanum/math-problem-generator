@@ -2,10 +2,10 @@
     "language":"en",
     "txt_title":"Math problem generator",
     "txt_subtitle":"Exercises for beginner programmers (basically)",
-    "txt_description":"Write a program that can calculate problems in programing language you study.<br> Be sure you already mastering basic math in that language.",
+    "txt_description":"Write a program that can solve the problems here below in the programing language you study.<br> Make sure you are already mastering basic mathematics in that language..",
     "txt_inputs":"input",
     "txt_output":"output",
-    "txt_abouttest":"You can check your programm with this values:",
+    "txt_abouttest":"You can check your program with the following values:",
     "txt_if":"if",
     "txt_than":"than",
     "txt_download":"Download",
@@ -19,6 +19,3 @@
     "txt_lv5":"Complex with fractions",
     "txt_generated":"Generated at "
 }
-
-
-
